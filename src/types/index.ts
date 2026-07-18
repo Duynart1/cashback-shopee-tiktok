@@ -17,6 +17,7 @@ export interface User {
   referral_code: string;
   referred_by: string | null;
   zalo_id: string | null;
+  telegram_id: string | null;
   balance: number;
   total_earned: number;
   email_verified: boolean;
