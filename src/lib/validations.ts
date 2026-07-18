@@ -38,8 +38,8 @@ export const generateLinkSchema = z.object({
 
 export const withdrawSchema = z.object({
   amount: z.number().min(50000, 'Số tiền rút tối thiểu 50.000₫').max(100000000, 'Số tiền rút quá lớn'),
-  method: z.enum(['momo', 'bank', 'vietqr'], {
-    errorMap: () => ({ message: 'Vui lòng chọn phương thức rút tiền' }),
+  method: z.enum(['momo', 'bank', 'vietqr']).refine((val) => ['momo', 'bank', 'vietqr'].includes(val), {
+    message: 'Vui lòng chọn phương thức rút tiền'
   }),
   account_info: z.string().trim().min(1, 'Vui lòng nhập thông tin tài khoản').max(255, 'Thông tin quá dài'),
   account_name: z.string().trim().min(1, 'Vui lòng nhập tên chủ tài khoản').max(100, 'Tên quá dài'),
