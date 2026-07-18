@@ -54,6 +54,7 @@ export default async function RootLayout({
   return (
     <html lang="vi" className="dark">
       <head>
+        <meta name="zalo-platform-site-verification" content="EO-w3R-0Eo5b_-iWXz1x2M7sy0gDW2fNCZWv" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

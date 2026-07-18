@@ -16,6 +16,7 @@ export interface User {
   role: UserRole;
   referral_code: string;
   referred_by: string | null;
+  zalo_id: string | null;
   balance: number;
   total_earned: number;
   email_verified: boolean;
